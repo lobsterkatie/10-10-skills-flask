@@ -1,0 +1,20 @@
+body {
+    background-color: #33CCFF;
+}
+
+h1, h3 {
+    text-align: center;
+}
+
+form {
+    font-family: Courier;
+}
+
+label {
+    margin-top: 5px;
+}
+
+/* how would you make it be red only once the form has been submitted?*/
+/*input:invalid {
+    background-color: red;
+}*/

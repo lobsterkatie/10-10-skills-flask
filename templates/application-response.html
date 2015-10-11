@@ -1,10 +1,29 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Application Response</title>
-</head>
-<body>
-    <!-- fill this in -->
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}
+    Thanks!
+{% endblock %}
+
+{% block overriding_stylesheet %}
+    <link rel="stylesheet" href="/static/css/response-stylesheet.css">
+{% endblock%}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <h1>Thanks, {{ firstname }} {{ lastname }}!</h1>
+
+                <h3>
+                    We'll be in touch with you shortly about your potential role
+                    as a {{ job_title }} making ${{ min_salary }}.
+                </h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <img src="http://i.giphy.com/LdTdahCeLlAc0.gif">
+            </div>
+        </div>
+    </div>
+{% endblock %}
