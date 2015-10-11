@@ -1,11 +1,34 @@
-<!doctype html>
-<html>
-<head>
-  <title>Sample Home Page</title>
-</head>
-<body>
+{% extends "base.html" %}
 
-<h1>This is the sample home page.</h1>
+{% block title %}
+    Hi, there!
+{% endblock %}
 
-</body>
-</html>
+{% block overriding_stylesheet %}
+    <link rel="stylesheet" href="static/css/index-stylesheet.css">
+{% endblock%}
+
+{% block body %}
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <h1>Hello!</h1>
+
+                <h3>Would you like to apply for a job?</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-md-2 col-md-offset-5" id="yes-no">
+                <form>
+                    <input type="submit" value="Yes!" formaction="/application-form">
+                    <input type="submit" value="No." formaction="/spurned">
+                </form>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+
+
