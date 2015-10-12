@@ -33,7 +33,7 @@ def confirmation_page():
     fname = request.form.get("firstname")
     lname = request.form.get("lastname")
     title = request.form.get("job-title")
-    salary = request.form.get("min-salary")
+    salary = int(request.form.get("min-salary"))
 
     return render_template("application-response.html",
                            firstname=fname, lastname=lname,

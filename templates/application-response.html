@@ -16,7 +16,7 @@
 
                 <h3>
                     We'll be in touch with you shortly about your potential role
-                    as a {{ job_title }} making ${{ min_salary }}.
+                    as a {{ job_title }} making ${{ "{salary:,.0f}".format(salary=min_salary) }}.
                 </h3>
             </div>
         </div>
